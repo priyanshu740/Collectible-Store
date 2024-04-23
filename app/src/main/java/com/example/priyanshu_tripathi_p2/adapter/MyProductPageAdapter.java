@@ -1,5 +1,6 @@
 package com.example.priyanshu_tripathi_p2.adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -67,7 +68,7 @@ public class MyProductPageAdapter extends RecyclerView.Adapter<MyProductPageAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
 
 
         holder.productName.setText(productList.get(position).getName());
