@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/idTVHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/white"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="Welcome to Antiques and Collectibles \n "
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/idEdtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/idTVHeader"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="10dp"
+        android:hint="Your Username"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#FFFFFF" />
+
+    <EditText
+            android:id="@+id/idEdtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idEdtUserName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Your Password"
+            android:textColorHint="#FFFFFF"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/signInText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idEdtUserName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="202dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Dont Have an account? Register."
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idEdtPassword"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="53dp"
+            android:layout_marginEnd="10dp"
+            android:text="Login"
+            android:backgroundTint="@color/white"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            />
+
+    </RelativeLayout>

@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_arrow"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        />
+
+    <TextView
+        android:id="@+id/cartTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="312dp"
+        android:layout_marginTop="16dp"
+        android:layout_toEndOf="@id/backButton"
+        android:text="Cart"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_delete"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_alignTop="@id/backButton"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        cardview:cardBackgroundColor="#FFFFFF"
+        cardview:cardCornerRadius="8dp"
+        cardview:cardElevation="4dp"
+        android:layout_below="@id/backButton"
+        android:layout_marginTop="23dp">
+
+        <!-- Cart Items Container -->
+        <LinearLayout
+            android:id="@+id/cartItemsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="164dp"
+            android:layout_below="@id/backButton"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="0dp"
+            android:orientation="vertical"
+            android:layout_margin="15dp"
+            android:padding="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/productImage"
+                    android:layout_width="84dp"
+                    android:layout_height="84dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/logo" />
+
+                <LinearLayout
+                    android:id="@+id/productDetails"
+                    android:layout_width="226dp"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="17dp"
+                    android:layout_toStartOf="@+id/quantityLayout"
+                    android:layout_toEndOf="@id/productImage"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/productName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Product Name"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/productPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$Price"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/productDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="description"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <!-- Quantity Layout -->
+                <LinearLayout
+                    android:id="@+id/quantityLayout"
+                    android:layout_width="36dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="vertical">
+
+                    <!-- Increase Button -->
+                    <Button
+                        android:id="@+id/buttonIncrease"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_increase"
+                        android:text="+"
+                        android:textSize="20sp"
+                        />
+
+                    <!-- Product Quantity -->
+                    <TextView
+                        android:id="@+id/productQuantity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textSize="16sp"
+                        />
+
+                    <Button
+                        android:id="@+id/buttonDecrease"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_decrese"
+                        android:text="-"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="3dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/amountTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Amount total"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/amountTotalPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="$55"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/checkout"
+            android:layout_width="384dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Checkout"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

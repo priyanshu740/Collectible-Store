@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="WhiteHintTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="android:textColorHint">#FFFFFF</item>
+    </style>
+    <style name="WhiteTextAppearance" parent="@style/TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColor">@color/white</item>
+    </style>
+</resources>
